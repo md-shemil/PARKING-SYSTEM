@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Parking History</title>
+</head>
+<body class="container">
+    <h1 class="heading">Parking History</h1>
+    <table class="history-table">
+        <tr class="table-header">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Vehicle Registration</th>
+            <th>Vehicle Type</th>
+            <th>Parking Hours</th>
+            <th>Charge Per Hour</th>
+            <th>Total Amount</th>
+        </tr>
+        {% for record in parking_history %}
+        <tr class="table-row">
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+            <td>{{ record[3] }}</td>
+            <td>{{ record[4] }}</td>
+            <td>{{ record[5] }}</td>
+            <td>${{ record[6] }}</td>
+            <td>${{ record[7] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/" class="home-link">
+        <button type="button" class="home-button">Back to Home Page</button>
+    </a>
+</body>
+</html>

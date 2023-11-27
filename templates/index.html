@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Car Parking App</title>
+</head>
+<body class="container">
+    <h1 class="heading">Car Parking Registration</h1>
+    <form action="/submit" method="post" class="form">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" name="name" required class="form-input"><br>
+
+        <label for="phone_number" class="form-label">Phone Number:</label>
+        <input type="tel" name="phone_number" required class="form-input"><br>
+
+        <label for="vehicle_registration" class="form-label">Vehicle Registration:</label>
+        <input type="text" name="vehicle_registration" required class="form-input"><br>
+
+        <label for="vehicle_type" class="form-label">Vehicle Type:</label>
+        <select name="vehicle_type" required class="form-input">
+            <option value="car">Car</option>
+            <option value="motorcycle">Motorcycle</option>
+            <!-- Add more options as needed -->
+        </select><br>
+
+        <label for="parking_hours" class="form-label">Number of Hours:</label>
+        <input type="number" name="parking_hours" required class="form-input"><br>
+
+        <button type="submit" class="form-button">Submit</button>
+    </form>
+
+    <a href="/history" class="history-link">
+        <button type="button" class="history-button">View Parking History</button>
+    </a>
+</body>
+</html>
